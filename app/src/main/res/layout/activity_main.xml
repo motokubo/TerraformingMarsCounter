@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#f0f0f0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:divider="?android:attr/dividerHorizontal"
+        android:showDividers="middle"
+        android:dividerPadding="8dp">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terraforming Mars - Contador de Recursos"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:textStyle="bold" />
+
+        <!-- Títulos: Recursos -->
+        
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1,2"
+            android:layout_marginBottom="8dp">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recurso"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="8dp" /> <!-- Adjust padding if needed -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quantidade"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="8dp" /> <!-- Adjust padding if needed -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Produção"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="8dp" /> <!-- Adjust padding if needed -->
+            </TableRow>
+        </TableLayout>
+        <!-- Megacréditos -->
+        <LinearLayout
+            android:id="@+id/resource_credits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <include
+                layout="@layout/resource_counter"
+                android:tag="Megacréditos" />
+        </LinearLayout>
+
+        <!-- Plantas -->
+        <LinearLayout
+            android:id="@+id/resource_plants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <include
+                layout="@layout/resource_counter"
+                android:tag="Plantas" />
+        </LinearLayout>
+
+        <!-- Aço -->
+        <LinearLayout
+            android:id="@+id/resource_steel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <include
+                layout="@layout/resource_counter"
+                android:tag="Aço" />
+        </LinearLayout>
+
+        <!-- Titânio -->
+        <LinearLayout
+            android:id="@+id/resource_titanium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <include
+                layout="@layout/resource_counter"
+                android:tag="Titânio" />
+        </LinearLayout>
+
+        <!-- Energia -->
+        <LinearLayout
+            android:id="@+id/resource_energy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <include
+                layout="@layout/resource_counter"
+                android:tag="Energia" />
+        </LinearLayout>
+
+        <!-- Calor -->
+        <LinearLayout
+            android:id="@+id/resource_heat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+            <include
+                layout="@layout/resource_counter"
+                android:tag="Calor" />
+        </LinearLayout>
+
+        <!-- Botão de Turno de Produção -->
+        <Button
+            android:id="@+id/btn_production_turn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#4CAF50"
+            android:elevation="4dp"
+            android:text="Realizar Turno de Produção"
+            android:textColor="#263238"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>
